@@ -1,0 +1,111 @@
+table.rTable {
+width: 100%;
+border-collapse: collapse;
+text-align: center;
+color: #ddd;
+background-color: #111111;
+margin: 29px 0;
+border: 1px solid #111111;
+}
+
+table.rTable th {
+background: #222222;
+color: #ddd;
+font-size: 20px;
+text-transform: uppercase;
+text-align: center;
+}
+
+table tr:nth-of-type(even) {
+background: #222222;
+}
+
+table.rTable tr {
+border-bottom: 1px solid #121E52;
+
+}
+
+table.rTable td {
+padding: 10px;
+text-align: left;
+}
+
+table.rTable td {
+font-size: 18px;
+color: #ddd;
+}
+
+table.rTable td a {
+display: block;
+text-decoration: underline;
+color: #ddd !important;
+}
+
+@media screen and (max-width: 500px){
+
+  table.rTable thead {
+    display:none;
+  }
+  
+
+  table.rTable td:nth-child(2),
+  table.rTable td:nth-child(3),
+  table.rTable td:nth-child(4),
+  table.rTable td:nth-child(5),
+  table.rTable td:nth-child(6){
+    display:none;
+  }
+  
+  td.showMe{
+    display:block!important;
+  }
+
+  table.rTable td:nth-child(1){
+    background: #03588D;
+    display:block;
+    color: #FFFFFF;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor:pointer
+  } 
+    table.rTable td:nth-child(1):hover{
+    background: #000;
+  } 
+  
+  table.rTable td:nth-child(2):before{
+    content:'Time In: ';
+    font-weight:bold;
+  }
+  
+  table.rTable td:nth-child(3):before{
+    content:'Time Out: ';
+    font-weight:bold;
+  }
+  
+  table.rTable td:nth-child(4):before{
+    content:'Project: ';
+    font-weight:bold;
+  }  
+  
+  table.rTable td:nth-child(5):before{
+    content:'Description: ';
+    font-weight:bold;
+  }  
+  table.rTable td:nth-child(6):before{
+    content:'Hours: ';
+    font-weight:bold;
+  }  
+
+  td.selected{
+    background:#000!important;
+  }
+  
+table.rTable td.selected:nth-child(1):before{
+    content:' - '
+  }
+table.rTable td:nth-child(1):before{   
+  content:' + '
+}
+
+  
+}
